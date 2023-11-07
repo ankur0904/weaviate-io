@@ -4,9 +4,7 @@ sidebar_position: 12
 image: og/docs/modules/generative-palm.jpg
 # tags: ['generative', 'transformers', 'palm', 'gcp']
 ---
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 ## In short
 
@@ -80,7 +78,7 @@ During the **configuration** of your Docker instance, by adding `PALM_APIKEY` un
 
 </details>
 
-### Token expiry for Google Cloud users
+### Token expiration for Google Cloud users
 
 import GCPTokenExpiryNotes from '/_includes/gcp.token.expiry.notes.mdx';
 
@@ -324,7 +322,6 @@ The `chat-bison` model is used by default. The model has the following propertie
 - Max output tokens: 1,024
 - Training data: Up to Feb 2023
 
-## More resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 

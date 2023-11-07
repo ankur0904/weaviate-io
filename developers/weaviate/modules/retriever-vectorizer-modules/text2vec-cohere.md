@@ -4,9 +4,7 @@ sidebar_position: 10
 image: og/docs/modules/text2vec-cohere.jpg
 # tags: ['text2vec', 'text2vec-cohere', 'cohere']
 ---
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 ## Overview
 
@@ -119,7 +117,7 @@ You can set vectorizer behavior using the `moduleConfig` section under each clas
 #### Property-level
 
 - `skip` – whether to skip vectorizing the property altogether. Default: `false`
-- `vectorizePropertyName` – whether to vectorize the property name. Default: `true`
+- `vectorizePropertyName` – whether to vectorize the property name. Default: `false`
 
 #### Example
 
@@ -138,7 +136,7 @@ You can set vectorizer behavior using the `moduleConfig` section under each clas
           "model": "embed-multilingual-v2.0", // Defaults to embed-multilingual-v2.0 if not set
           "truncate": "RIGHT", // Defaults to RIGHT if not set
           // highlight-start
-          "vectorizeClassName": "false"
+          "vectorizeClassName": false
           // highlight-end
         }
       },
@@ -217,13 +215,12 @@ import CodeThrottlingExample from '/_includes/code/text2vec-api.throttling.examp
 
 ## Usage example
 
-The below shows a code example of how to use a `nearText` query with `text2vec-cohere`.
+This is an example of a `nearText` query with `text2vec-cohere`.
 
 import GraphQLFiltersNearNextCohere from '/_includes/code/graphql.filters.nearText.cohere.mdx';
 
 <GraphQLFiltersNearNextCohere/>
 
-## More resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 

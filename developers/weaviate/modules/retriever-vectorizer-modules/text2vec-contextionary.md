@@ -4,9 +4,7 @@ sidebar_position: 20
 image: og/docs/modules/text2vec-contextionary.jpg
 # tags: ['text2vec', 'text2vec-contextionary', 'contextionary']
 ---
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 
 ## Overview
@@ -115,7 +113,7 @@ You can set vectorizer behavior using the `moduleConfig` section under each clas
 #### Property-level
 
 - `skip` – whether to skip vectorizing the property altogether. Default: `false`
-- `vectorizePropertyName` – whether to vectorize the property name. Default: `true`
+- `vectorizePropertyName` – whether to vectorize the property name. Default: `false`
 
 #### Example
 
@@ -129,7 +127,7 @@ You can set vectorizer behavior using the `moduleConfig` section under each clas
       "moduleConfig": {
         // highlight-start
         "text2vec-contextionary": {
-          "vectorizeClassName": "false"
+          "vectorizeClassName": false
         }
         // highlight-end
       },
@@ -185,7 +183,7 @@ Author
 
 ## Usage example
 
-The below shows a code example of how to use a `nearText` query with `text2vec-contextionary`.
+This is an example of a `nearText` query with `text2vec-contextionary`.
 
 import CodeNearText from '/_includes/code/graphql.filters.nearText.mdx';
 
@@ -223,7 +221,7 @@ The result contains the following fields:
 #### Example
 
 ```bash
-$ curl http://localhost:8080/v1/modules/text2vec-contextionary/concepts/magazine
+curl http://localhost:8080/v1/modules/text2vec-contextionary/concepts/magazine
 ```
 
 or (note the camelCased compound concept)
@@ -339,7 +337,7 @@ Note that it is not (yet) possible to extend the Contextionary with concatenated
 You can also overwrite current concepts with this endpoint. Let's say you are using the abbreviation `API` for `Academic Performance Index` instead of `Application Programming Interface`, and you want to reposition this concept in the Contextionary:
 
 ```bash
-$ curl \
+curl \
   -X POST \
   -H 'Content-Type: application/json' \
   -d '{
@@ -448,7 +446,6 @@ The `text2vec-contextionary` module is based on the [`fastText`](https://github.
 
 It is your responsibility to evaluate whether the terms of its license(s), if any, are appropriate for your intended use.
 
-## More resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 

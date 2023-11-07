@@ -5,9 +5,7 @@ image: og/docs/api.jpg
 # tags: ['graphql', 'filters']
 ---
 
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 import TryEduDemo from '/_includes/try-on-edu-demo.mdx';
 
@@ -250,7 +248,7 @@ Each query using the `Like` operator iterates over the entire inverted index for
 
 ### `ContainsAny` / `ContainsAll`
 
-The `ContainsAny` and `ContainsAll` operators allow you to search within an array (or text) using another array as criteria.
+The `ContainsAny` and `ContainsAll` operators filter objects using values of an array as criteria.
 
 Both operators expect an array of values and return objects that match based on the input values.
 
@@ -313,6 +311,12 @@ This query fetches individuals who speak **one or more of the specified language
 ```
 
 This query fetches individuals who can speak **all three languages**: `Chinese`, `French`, and `English`.
+
+## Filter performance
+
+import RangeFilterPerformanceNote from '/_includes/range-filter-performance-note.mdx';
+
+<RangeFilterPerformanceNote />
 
 ## Special cases
 
@@ -551,6 +555,8 @@ import GraphQLFiltersWhereGeocoords from '/_includes/code/graphql.filters.where.
 
 </details>
 
+Note that `geoCoordinates` uses a vector index under the hood.
+
 ### By null state
 
 Using the `IsNull` operator allows you to do filter for objects where given properties are `null` or `not null`. Note that zero-length arrays and empty strings are equivalent to a null value.
@@ -571,7 +577,6 @@ Filtering by null-state requires the target class to be configured to index this
 :::
 
 
-## More Resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 

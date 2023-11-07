@@ -4,9 +4,7 @@ sidebar_position: 80
 image: og/docs/tutorials.jpg
 # tags: ['how to', 'spark connector', 'spark']
 ---
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 ## Overview
 
@@ -45,7 +43,7 @@ The Spark Connector is able to automatically infer the correct Spark DataType ba
 
 Often a Spark Session will be created as part of your Spark environment (such as a Databricks notebook) and the only task is to add the Weaviate Spark Connector jar as a library to your cluster.
 
-If you want to create a local Spark Session manually the below code will create one with the connector:
+If you want to create a local Spark Session manually, use the following code to create a session with the connector:
 
 ```python
 from pyspark.sql import SparkSession
@@ -229,7 +227,6 @@ df.limit(1500).withColumnRenamed("id", "uuid").write.format("io.weaviate.spark.W
 
 - Additionally OIDC options are supported `.option("oidc:username", ...)`, `.option("oidc:password", ...)`, `.option("oidc:clientSecret", ...)`, `.option("oidc:accessToken", ...)`, `.option("oidc:accessTokenLifetime", ...)`, `.option("oidc:refreshToken", ...)`. For more information on these options please refer to the [Java client documentation](../client-libraries/java.md#oidc-authentication).
 
-## More resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 

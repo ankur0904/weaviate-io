@@ -1,14 +1,14 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import FilteredTextBlock from '@site/src/components/Documentation/FilteredTextBlock';
-import EndToEndPyCode from '!!raw-loader!/_includes/code/quickstart.autoschema.endtoend.py';
-import EndToEndTSCode from '!!raw-loader!/_includes/code/quickstart.autoschema.endtoend.ts';
+import EndToEndPy3Code from '!!raw-loader!/_includes/code/quickstart/endtoend.py3.py';
+import EndToEndTSCode from '!!raw-loader!/_includes/code/quickstart/endtoend.ts';
 
 <Tabs groupId="languages">
 <TabItem value="py" label="Python">
 
 <FilteredTextBlock
-  text={EndToEndPyCode}
+  text={EndToEndPy3Code}
   startMarker="# DockerInstantiationExample"
   endMarker="# END DockerInstantiationExample"
   language="py"
@@ -102,7 +102,7 @@ echo '{
 }' | curl \
     -X POST \
     -H "Content-Type: application/json" \
-    -H "X-OpenAI-Api-Key: YOUR-OPENAI-API-KEY" \
+    -H "X-OpenAI-Api-Key: $OPENAI_API_KEY" \
     -d @- \
     http://localhost:8080/v1/graphql
 ```

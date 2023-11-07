@@ -4,9 +4,7 @@ sidebar_position: 20
 image: og/docs/api.jpg
 # tags: ['graphql', 'search operators']
 ---
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 import TryEduDemo from '/_includes/try-on-edu-demo.mdx';
 
@@ -399,6 +397,7 @@ Enabled by the modules:
 - [text2vec-huggingface](../../modules/retriever-vectorizer-modules/text2vec-huggingface.md),
 - [text2vec-transformers](../../modules/retriever-vectorizer-modules/text2vec-transformers.md),
 - [text2vec-contextionary](../../modules/retriever-vectorizer-modules/text2vec-contextionary.md).
+- [text2vec-palm](../../modules/retriever-vectorizer-modules/text2vec-palm.md).
 - [multi2vec-clip](../../modules/retriever-vectorizer-modules/multi2vec-clip.md).
 
 This operator allows you to find data objects in the vicinity of the vector representation of a single or multiple concepts. It's supported by the `Get{}` function.
@@ -536,7 +535,6 @@ import QNATransformersAsk from '/_includes/code/qna-transformers.ask.mdx';
 
 The `_additional{}` property is extended with the answer and a certainty of the answer.
 
-## More Resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 

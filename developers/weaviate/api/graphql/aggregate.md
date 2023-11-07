@@ -4,9 +4,7 @@ sidebar_position: 15
 image: og/docs/api.jpg
 # tags: ['graphql', 'aggregate', 'aggregate{}', 'meta']
 ---
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 import TryEduDemo from '/_includes/try-on-edu-demo.mdx';
 
@@ -120,6 +118,10 @@ As such, this `Aggregate` query will retrieve the total object count in a class.
 ### groupBy argument
 
 You can use a groupBy argument to get meta information about groups of data objects.
+
+import GroupbyLimitations from '/_includes/groupby-limitations.mdx';
+
+<GroupbyLimitations />
 
 The `groupBy{}` argument is structured as follows for the `Aggregate{}` function:
 
@@ -281,7 +283,6 @@ import GraphQLAggNearText from '/_includes/code/graphql.aggregate.nearText.mdx';
 
 <GraphQLAggNearText/>
 
-## More Resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 

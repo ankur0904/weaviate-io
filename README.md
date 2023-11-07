@@ -116,7 +116,7 @@ You may see some warnings during the installation.
 When the installation completes, start the `yarn` server to test your build.
 
 ```
-$ yarn start &
+yarn start &
 ```
 
 `yarn` builds the project as a static web site and starts a server to host it.
@@ -140,25 +140,34 @@ This command generates static content into the ``build`` directory. You can use
 a hosting service to serve the static content.
 
 ```
-$ yarn build
+yarn build
 ```
 
 The `build` command is useful when you are finished editing. If you ran
 `yarn start` to start a local web server, you do not need to use `yarn build` to
 see you changes while you are editing.
 
+The build command runs a link checker. If you are having trouble with temporarily broken links, you can update the `URL_IGNORES` variable to disable checking for that link.
+
+To disable link checking, add the broken URL to the `URL_IGNORES` lists in these scripts:
+
+- [verify-links.sh](https://github.com/weaviate/weaviate-io/blob/main/_build_scripts/verify-links.sh)
+- [verify-links-build-dev.sh](https://github.com/weaviate/weaviate-io/blob/main/_build_scripts/verify-links-build-dev.sh)
+
+Check the link again before you submit a merge request. If the link works, remove it from the `URL_IGNORES` list. If the link doesn't work, tell us about it in the pull request.
+
 ### Deployment
 
 Using SSH:
 
 ```
-$ USE_SSH=true yarn deploy
+USE_SSH=true yarn deploy
 ```
 
 Not using SSH:
 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

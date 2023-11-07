@@ -4,9 +4,7 @@ sidebar_position: 90
 image: og/docs/tutorials.jpg
 # tags: ['modules']
 ---
-import Badges from '/_includes/badges.mdx';
 
-<Badges/>
 
 ## Overview
 
@@ -80,7 +78,7 @@ If you don't want to vectorize a property at all, you can simply skip it.
 
 ## Example
 
-The below is a complete example of a schema.
+The following code is a complete example of a schema.
 
 Let's take a look at the definition for the `Article` class. Look for the `"moduleConfig"` entries on the class and on the property level.
 
@@ -301,7 +299,6 @@ Some such modules can enables the GraphQL API, for example as shown here.
 
 Modules are add-ons to Weaviate that can perform additional functions. You don't have to use them, but you can.
 
-## More Resources
 
 import DocsMoreResources from '/_includes/more-resources-docs.md';
 
